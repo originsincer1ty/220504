@@ -43,17 +43,17 @@
 	}
 
 	.li a:hover {
-  	background: #ffffff;
+ 	background: #ffffff;
  	 	color: black;
 	}
 
-	.li logo {
+	.li .site-brand {
 		float: left;
 		color: #ffffff; 
 		display: block;
 		font-size: 13px;
 		padding: 12px 14px;
-		magrin-left: 12%;
+		margin-left: 1%;
 	}
 
 .index { 
@@ -703,6 +703,250 @@ input[id="tab07"]:checked ~
 	position: absolute;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+img {
+	max-width: 100%;
+}
+
+@media (max-width: 768px) {
+	.li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		padding: 4px 0;
+	}
+
+	.li a,
+	.li .site-brand {
+		float: none;
+		margin: 0;
+		padding: 10px 8px;
+		font-size: 12px;
+	}
+
+	.li .site-brand {
+		width: 100%;
+		text-align: center;
+	}
+
+	.mainlogo img {
+		width: min(92vw, 760px);
+		height: auto;
+		margin-top: 64px;
+	}
+
+	.h2_top,
+	.h2,
+	.h5,
+	.h7a {
+		height: auto;
+		margin-left: 6vw;
+		margin-right: 6vw;
+	}
+
+	.h2_top {
+		padding: 20vw 0 10vw;
+	}
+
+	.h2_flex {
+		height: auto;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 10px;
+	}
+
+	.h2_box_1,
+	.h2_box_2 {
+		width: auto;
+	}
+
+	.h2_box_2 {
+		grid-column: 1 / -1;
+	}
+
+	.h2_box {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 1;
+	}
+
+	.h2_background_text1,
+	.h2_background_text2,
+	.h2_background_text3,
+	.h2_box .info {
+		font-size: 16px !important;
+		line-height: 1.5 !important;
+	}
+
+	.h2_box .info {
+		padding: 28% 10%;
+	}
+
+	.h2_bottom {
+		height: auto;
+		padding: 18vw 8vw;
+	}
+
+	.h3,
+	.h4 {
+		height: auto;
+		padding: 10vw 0;
+	}
+
+	.h3_box,
+	.h3_image2,
+	.h4_box {
+		width: 90vw;
+		height: auto;
+	}
+
+	.h3_image,
+	.h4_image {
+		width: 100%;
+		height: auto;
+	}
+
+	.h5 {
+		padding: 10vw 0;
+	}
+
+	.h5_flex {
+		height: auto !important;
+		flex-flow: row wrap;
+		gap: 12px !important;
+	}
+
+	.h5_box,
+	.h5_box_2 {
+		width: min(42vw, 260px);
+		height: auto;
+	}
+
+	.h5_textbox,
+	.h5_blank {
+		height: auto;
+		margin: 7vw 0;
+	}
+
+	.h5_text {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+
+	.h7_1,
+	.h6,
+	.h7,
+	.h7_container {
+		height: auto;
+	}
+
+	.h6_text {
+		font-size: 14vw;
+		line-height: 1.1;
+		padding: 12vw 4vw;
+	}
+
+	.h7_container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+		padding: 8vw 0 12vw;
+	}
+
+	.exp {
+		order: 1;
+		width: 90vw;
+		height: auto;
+		min-height: 28px;
+		font-size: 16px;
+	}
+
+	.picbox {
+		order: 2;
+		height: auto;
+	}
+
+	.picbox_img {
+		width: 90vw;
+		height: auto;
+	}
+
+	.select {
+		order: 3;
+		width: 90vw;
+		gap: 10px;
+		margin: 0;
+	}
+
+	label[for*="tab"] {
+		font-size: 18px;
+		line-height: 1.25;
+		padding: 8px 10px;
+	}
+
+	.textbox {
+		order: 4;
+		width: 90vw;
+		margin-left: 0;
+	}
+
+	.t_flexbox {
+		gap: 14px;
+	}
+
+	.t_flex {
+		height: auto;
+		min-height: 76px;
+	}
+
+	textarea {
+		width: calc(100% - 78px);
+		min-height: 76px;
+		padding: 10px;
+		font-size: 14px;
+		line-height: 1.45;
+	}
+
+	button {
+		width: 78px;
+		min-height: 76px;
+		font-size: 16px;
+	}
+
+	.h8 {
+		height: auto;
+		padding: 12vw 0;
+	}
+
+	.h8_box {
+		width: 90vw;
+		height: auto;
+	}
+
+	.h10_footer {
+		height: auto;
+		flex-wrap: wrap;
+		padding: 16px 0;
+		gap: 8px;
+	}
+
+	.h10_box {
+		width: calc(50% - 10px);
+		height: auto;
+		font-size: 12px;
+		line-height: 1.4;
+	}
+}
+
 
 </style>
 
@@ -710,7 +954,7 @@ input[id="tab07"]:checked ~
 <body>
 
 	<div class="li">
-		<logo>supersexygreetings.com</logo>
+		<a class="site-brand" href="#">supersexygreetings.com</a>
 		<a href="#bonus">Hi there</a>
 		<a href="#content">Greetings</a>
 		<a href="#use">How to use</a>
@@ -763,7 +1007,7 @@ input[id="tab07"]:checked ~
 				</div>
 
 				<div class="h2_box">
-					<img src="image/web_2_3.jpg" class= "h2_box_before"/>
+					<img src="image/web_2_3_gau.jpg" class= "h2_box_before"/>
 					<a class="info">
 						<p>교수님의</p> <p>여린 마음에</p>
 						<p>상처내고</p> <p>싶지 않아요</p>
@@ -834,17 +1078,17 @@ input[id="tab07"]:checked ~
 	</div>
 
 	<div class="h3">
-		<img src="image/web_1_1.png" 
-		div class="h3_image2 absolute"
+		<img src="image/web_1_1.png"
+		class="h3_image2 absolute"
 		title="Salvation coming down from heaven for the poor college students">
 			<div class="h3_box relative">
-			<img src="image/web_1.jpg" div class="h3_image">
+			<img src="image/web_1.jpg" class="h3_image">
 			</div>
 	</div>
 
 	<div class="h4">
 		<div class="h4_box">
-			<img src="image/web_4_full.jpg" div class="h4_image">
+			<img src="image/web_4_full.jpg" class="h4_image">
 	</div>
 </div>
 
@@ -1434,7 +1678,7 @@ input[id="tab07"]:checked ~
 		</div>
 	</div>
 
-<div class='h8'>
+	<div id="bonus" class='h8'>
 	<img class='h8_box' src='image/web_8.jpg'  align="bottom">
 	</img>
 	</div>
@@ -1459,59 +1703,22 @@ input[id="tab07"]:checked ~
 			</div>
 	</div>
 
-</body>
-</script>
 <script type="text/javascript">
-	document.getElementById("textarea_copy").onclick = function(){ const textArea = document.getElementById("textArea"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy1").onclick = function(){ const textArea = document.getElementById("textArea1"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy2").onclick = function(){ const textArea = document.getElementById("textArea2"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy3").onclick = function(){ const textArea = document.getElementById("textArea3"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy4").onclick = function(){ const textArea = document.getElementById("textArea4"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy5").onclick = function(){ const textArea = document.getElementById("textArea5"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy6").onclick = function(){ const textArea = document.getElementById("textArea6"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy7").onclick = function(){ const textArea = document.getElementById("textArea7"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy8").onclick = function(){ const textArea = document.getElementById("textArea8"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy9").onclick = function(){ const textArea = document.getElementById("textArea9"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy10").onclick = function(){ const textArea = document.getElementById("textArea10"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy11").onclick = function(){ const textArea = document.getElementById("textArea11"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy12").onclick = function(){ const textArea = document.getElementById("textArea12"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy13").onclick = function(){ const textArea = document.getElementById("textArea13"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy14").onclick = function(){ const textArea = document.getElementById("textArea14"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy15").onclick = function(){ const textArea = document.getElementById("textArea15"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy16").onclick = function(){ const textArea = document.getElementById("textArea16"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy17").onclick = function(){ const textArea = document.getElementById("textArea17"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy18").onclick = function(){ const textArea = document.getElementById("textArea18"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy19").onclick = function(){ const textArea = document.getElementById("textArea19"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy20").onclick = function(){ const textArea = document.getElementById("textArea20"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy21").onclick = function(){ const textArea = document.getElementById("textArea21"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy22").onclick = function(){ const textArea = document.getElementById("textArea22"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy23").onclick = function(){ const textArea = document.getElementById("textArea23"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy24").onclick = function(){ const textArea = document.getElementById("textArea24"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy25").onclick = function(){ const textArea = document.getElementById("textArea25"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy26").onclick = function(){ const textArea = document.getElementById("textArea26"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy27").onclick = function(){ const textArea = document.getElementById("textArea27"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy28").onclick = function(){ const textArea = document.getElementById("textArea28"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy29").onclick = function(){ const textArea = document.getElementById("textArea29"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy30").onclick = function(){ const textArea = document.getElementById("textArea30"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy31").onclick = function(){ const textArea = document.getElementById("textArea31"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy32").onclick = function(){ const textArea = document.getElementById("textArea32"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy33").onclick = function(){ const textArea = document.getElementById("textArea33"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy34").onclick = function(){ const textArea = document.getElementById("textArea34"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy35").onclick = function(){ const textArea = document.getElementById("textArea35"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy36").onclick = function(){ const textArea = document.getElementById("textArea36"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy37").onclick = function(){ const textArea = document.getElementById("textArea37"); textArea.select(); document.execCommand('copy'); }	
-	document.getElementById("textarea_copy38").onclick = function(){ const textArea = document.getElementById("textArea38"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy39").onclick = function(){ const textArea = document.getElementById("textArea39"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy40").onclick = function(){ const textArea = document.getElementById("textArea40"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy41").onclick = function(){ const textArea = document.getElementById("textArea41"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy42").onclick = function(){ const textArea = document.getElementById("textArea42"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy43").onclick = function(){ const textArea = document.getElementById("textArea43"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy44").onclick = function(){ const textArea = document.getElementById("textArea44"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy45").onclick = function(){ const textArea = document.getElementById("textArea45"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy46").onclick = function(){ const textArea = document.getElementById("textArea46"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy47").onclick = function(){ const textArea = document.getElementById("textArea47"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy48").onclick = function(){ const textArea = document.getElementById("textArea48"); textArea.select(); document.execCommand('copy'); }
-	document.getElementById("textarea_copy49").onclick = function(){ const textArea = document.getElementById("textArea49"); textArea.select(); document.execCommand('copy'); }
+	document.querySelectorAll('button[id^="textarea_copy"]').forEach(function(button) {
+		button.addEventListener('click', function() {
+			const textArea = button.parentElement.querySelector('textarea');
+			if (!textArea) return;
 
+			textArea.select();
+			document.execCommand('copy');
+
+			const originalText = button.textContent;
+			button.textContent = 'copied';
+			setTimeout(function() {
+				button.textContent = originalText;
+			}, 900);
+		});
+	});
 </script>
+</body>
 </html>
