@@ -431,8 +431,13 @@
 	flex-direction: row;
 }
 
+.t_flex form {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
 textarea {   	
-	width: 45vw;
+	width: 100%;
 	height: 100%;
 	resize: none;
   outline: none;
@@ -462,6 +467,7 @@ button {
   outline: 0;
   cursor: pointer;
   width: 8vw;
+  flex: 0 0 8vw;
   height: 100%;
   padding: 0;
   display: inline-block;
@@ -951,6 +957,7 @@ label[for*="tab"]:focus-visible,
 
 	button {
 		width: 78px;
+		flex-basis: 78px;
 		min-height: 76px;
 		font-size: 16px;
 	}
